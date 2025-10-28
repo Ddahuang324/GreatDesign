@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Page, GalleryImage } from './types';
@@ -7,6 +6,7 @@ import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
 import GalleryPage from './components/GalleryPage';
 import AboutPage from './components/AboutPage';
+import ArchivePage from './components/ArchivePage';
 import ProjectDetailPage from './components/ProjectDetailPage';
 import VRViewer from './components/VRViewer';
 
@@ -41,6 +41,8 @@ const App: React.FC = () => {
         return <GalleryPage key="gallery" onImageClick={handleSelectImage} />;
       case Page.About:
         return <AboutPage key="about" />;
+      case Page.Archive:
+        return <ArchivePage key="archive" onImageClick={handleSelectImage} />;
       default:
         return <HomePage key="home" onViewGallery={() => setCurrentPage(Page.Gallery)} />;
     }

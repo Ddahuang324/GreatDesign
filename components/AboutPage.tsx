@@ -1,7 +1,8 @@
+
 import React from 'react';
 // FIX: Import Variants type from framer-motion to provide explicit typing for variant objects.
 import { motion, Variants } from 'framer-motion';
-import { ABOUT_CONTENT } from '../constants';
+import { CONTACT_CONTENT } from '../constants';
 
 // FIX: Add Variants type annotation to ensure correct type inference for transition properties like 'ease'.
 const pageVariants: Variants = {
@@ -43,14 +44,14 @@ const AboutPage: React.FC = () => {
       <div className="space-y-12">
         <AnimatedText>
             <h2 className="text-3xl sm:text-4xl font-light tracking-wide text-center">
-                {ABOUT_CONTENT.title}
+                {CONTACT_CONTENT.title}
             </h2>
         </AnimatedText>
 
         <div className="space-y-8">
-            {ABOUT_CONTENT.paragraphs.map((p, index) => (
+            {CONTACT_CONTENT.paragraphs.map((p, index) => (
                 <AnimatedText key={index}>
-                    <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+                    <p className="text-base sm:text-lg leading-relaxed text-gray-700 text-center">
                         {p}
                     </p>
                 </AnimatedText>

@@ -2,6 +2,12 @@ export enum Page {
   Home,
   Gallery,
   About,
+  Archive,
+}
+
+export interface LayoutConfig {
+  colSpan: string;
+  rowSpan: string;
 }
 
 export interface GalleryImage {
@@ -11,9 +17,8 @@ export interface GalleryImage {
   caption: string;
   description: string;
   details: string[];
-  colSpan: string;
-  rowSpan: string;
   vrUrl?: string;
+  category: string;
 }
 
 export interface GalleryTextBlock {
@@ -21,8 +26,6 @@ export interface GalleryTextBlock {
   type: 'text';
   title: string;
   paragraph: string;
-  colSpan:string;
-  rowSpan: string;
 }
 
 export type GalleryItemData = GalleryImage | GalleryTextBlock;

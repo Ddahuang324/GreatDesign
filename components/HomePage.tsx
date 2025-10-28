@@ -1,3 +1,4 @@
+
 import React from 'react';
 // FIX: Import Variants type from framer-motion to provide explicit typing for variant objects.
 import { motion, Variants } from 'framer-motion';
@@ -51,10 +52,10 @@ const HomePage: React.FC<HomePageProps> = ({ onViewGallery }) => {
         variants={contentVariants}
       >
         <motion.h1 variants={contentVariants} className="text-4xl md:text-6xl font-light tracking-widest uppercase">
-          Project Solace
+          空间的美学新生
         </motion.h1>
         <motion.p variants={contentVariants} className="mt-4 text-md md:text-lg font-extralight tracking-wider">
-          A Study in Light and Form
+          匠心设计，品质生活
         </motion.p>
         <motion.div variants={contentVariants} className="mt-12">
           <motion.button
@@ -68,7 +69,7 @@ const HomePage: React.FC<HomePageProps> = ({ onViewGallery }) => {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            View Gallery
+            进入展廊
           </motion.button>
         </motion.div>
       </motion.div>

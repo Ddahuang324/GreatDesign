@@ -1,3 +1,4 @@
+
 import React from 'react';
 // FIX: Import Variants type from framer-motion to provide explicit typing for variant objects.
 import { motion, Variants } from 'framer-motion';
@@ -53,8 +54,8 @@ const VRViewer: React.FC<VRViewerProps> = ({ url, onClose }) => {
         animate="visible"
         exit="exit"
       >
-        <h3 className="text-2xl font-light text-[#222222] mb-3">VR Experience Ready</h3>
-        <p className="text-gray-600 mb-8">You will be redirected to an external site to view the interactive VR tour. This will open in a new tab.</p>
+        <h3 className="text-2xl font-light text-[#222222] mb-3">VR体验已就绪</h3>
+        <p className="text-gray-600 mb-8">您将被重定向到外部网站以查看交互式VR导览。这将在新标签页中打开。</p>
         
         <a
           href={url}
@@ -63,13 +64,13 @@ const VRViewer: React.FC<VRViewerProps> = ({ url, onClose }) => {
           onClick={() => setTimeout(onClose, 200)} // Close modal shortly after click
           className="inline-block px-8 py-3 bg-[#222222] text-white font-medium tracking-widest uppercase text-sm transition-all duration-300 ease-in-out transform hover:bg-[#B8860B] hover:scale-105"
         >
-          Launch VR
+          启动VR
         </a>
 
         <button
           onClick={onClose}
           className="absolute top-3 right-3 w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 z-10 hover:bg-gray-300 transition-colors"
-          aria-label="Close VR viewer"
+          aria-label="关闭VR查看器"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

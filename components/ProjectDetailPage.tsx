@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { GalleryImage } from '../types';
@@ -98,10 +99,10 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ image, onClose, o
             className="absolute top-6 left-6 z-50 text-sm font-medium tracking-wider uppercase flex items-center"
             whileHover={{ color: '#B8860B' }}
         >
-            <svg xmlns="http://www.w.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to Gallery
+            返回展廊
         </motion.button>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -133,10 +134,10 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ image, onClose, o
                  {allImages.length > 1 && (
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <NavButton onClick={(e) => { e.stopPropagation(); paginate(-1); }} position="left">
-                            <svg xmlns="http://www.w.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                         </NavButton>
                         <NavButton onClick={(e) => { e.stopPropagation(); paginate(1); }} position="right">
-                            <svg xmlns="http://www.w.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                         </NavButton>
                     </div>
                 )}
@@ -157,7 +158,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ image, onClose, o
 
                 {allImages.length > 1 && (
                     <motion.div variants={contentItemVariants} className="mt-auto pt-8 border-t border-gray-200">
-                        <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-500 mb-4">Details</h3>
+                        <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-500 mb-4">细节</h3>
                         <motion.div layout className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-2">
                             {visibleThumbnails.map((detailSrc) => (
                                 <motion.div 

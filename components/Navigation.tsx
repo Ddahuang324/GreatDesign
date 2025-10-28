@@ -9,9 +9,10 @@ interface NavigationProps {
 }
 
 const navItems = [
-  { page: Page.Home, label: 'Home' },
-  { page: Page.Gallery, label: 'Gallery' },
-  { page: Page.About, label: 'About' },
+  { page: Page.Home, label: '首页' },
+  { page: Page.Gallery, label: '展廊' },
+  { page: Page.Archive, label: '设计总览' },
+  { page: Page.About, label: '联系我们' },
 ];
 
 const Navigation: React.FC<NavigationProps> = ({ currentPage, setCurrentPage }) => {
