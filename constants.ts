@@ -19,7 +19,8 @@ export const GALLERY_IMAGES: GalleryItemData[] = [
     description: "Functionality meets artistry in a kitchen stripped to its essentials. Handle-less cabinetry, integrated appliances, and a monolithic marble island create a seamless and sculptural workspace for culinary creativity.",
     details: ['https://picsum.photos/seed/d2a/800/600', 'https://picsum.photos/seed/d2b/800/600'],
     colSpan: 'col-span-1', 
-    rowSpan: 'md:row-span-2' 
+    rowSpan: 'md:row-span-2',
+    vrUrl: 'https://vr.justeasy.cn/view/16965am85u5cq242-1696855679.html'
   },
   { 
     id: 3, 

@@ -39,7 +39,7 @@ const itemScrollVariants: Variants = {
 
 
 const GalleryItem: React.FC<GalleryItemProps> = ({ image, onClick }) => {
-  const { src, caption, colSpan, rowSpan } = image;
+  const { src, caption, colSpan, rowSpan, vrUrl } = image;
 
   return (
     <motion.div
@@ -67,12 +67,22 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ image, onClick }) => {
           className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-4"
           variants={overlayVariants}
         >
-          <motion.h3
-            className="text-white text-lg md:text-xl font-light tracking-wider"
+          <motion.div
+            className="flex items-center"
             variants={captionVariants}
           >
-            {caption}
-          </motion.h3>
+            {vrUrl && (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.254 9.682a9.023 9.023 0 0117.492 0 9.024 9.024 0 01-17.492 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 1v2.428m0 17.144V23m8.682-14.254l-1.717 1.717M5.035 5.035L6.752 6.752m12.213 12.213l-1.717-1.717M5.035 18.965l1.717-1.717M1 12h2.428m17.144 0H23" />
+                </svg>
+            )}
+            <h3
+                className="text-white text-lg md:text-xl font-light tracking-wider"
+            >
+                {caption}
+            </h3>
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>

@@ -13,6 +13,7 @@ export interface GalleryImage {
   details: string[];
   colSpan: string;
   rowSpan: string;
+  vrUrl?: string;
 }
 
 export interface GalleryTextBlock {

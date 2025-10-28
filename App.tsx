@@ -8,10 +8,12 @@ import HomePage from './components/HomePage';
 import GalleryPage from './components/GalleryPage';
 import AboutPage from './components/AboutPage';
 import ProjectDetailPage from './components/ProjectDetailPage';
+import VRViewer from './components/VRViewer';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
   const [selectedImageId, setSelectedImageId] = useState<number | null>(null);
+  const [vrUrlToView, setVrUrlToView] = useState<string | null>(null);
 
   const handleSelectImage = (id: number) => {
     setSelectedImageId(id);
@@ -19,6 +21,14 @@ const App: React.FC = () => {
 
   const handleCloseProject = () => {
     setSelectedImageId(null);
+  };
+
+  const handleOpenVR = (url: string) => {
+    setVrUrlToView(url);
+  };
+
+  const handleCloseVR = () => {
+    setVrUrlToView(null);
   };
 
   const selectedImage = GALLERY_IMAGES.find(item => item.type === 'image' && item.id === selectedImageId) as GalleryImage | undefined;
@@ -46,12 +56,16 @@ const App: React.FC = () => {
               key="project-detail"
               image={selectedImage} 
               onClose={handleCloseProject} 
+              onOpenVR={handleOpenVR}
             />
           ) : (
             renderPage()
           )}
         </AnimatePresence>
       </main>
+      <AnimatePresence>
+        {vrUrlToView && <VRViewer url={vrUrlToView} onClose={handleCloseVR} />}
+      </AnimatePresence>
     </div>
   );
 };
